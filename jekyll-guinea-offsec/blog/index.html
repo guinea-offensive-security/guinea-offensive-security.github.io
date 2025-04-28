@@ -1,0 +1,46 @@
+---
+layout: default
+title: Blog
+nav_order: 2
+---
+
+<div class="container mx-auto px-4 py-20">
+    <h1 class="text-4xl font-bold mb-12 text-center text-primary">Blog</h1>
+    
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        {% for post in site.posts %}
+            <article class="bg-secondary p-6 rounded-lg border border-accent/30 hover:border-accent transition-all duration-300 article-card">
+                {% if post.image %}
+                    <img src="{{ post.image | relative_url }}" alt="{{ post.title }}" class="w-full h-48 object-cover rounded-lg mb-4">
+                {% endif %}
+                
+                <h2 class="text-2xl font-bold mb-2 text-primary">
+                    <a href="{{ post.url | relative_url }}" class="hover:text-accent transition-colors">
+                        {{ post.title }}
+                    </a>
+                </h2>
+                
+                <div class="flex items-center text-sm text-muted-foreground mb-4">
+                    <time datetime="{{ post.date | date_to_xmlschema }}">
+                        {{ post.date | date: "%d/%m/%Y" }}
+                    </time>
+                    <span class="mx-2">•</span>
+                    <div class="flex flex-wrap gap-2">
+                        {% for tag in post.tags %}
+                            <span class="tag">{{ tag }}</span>
+                        {% endfor %}
+                    </div>
+                </div>
+                
+                <p class="text-muted-foreground mb-4">{{ post.excerpt | strip_html | truncate: 160 }}</p>
+                
+                <a href="{{ post.url | relative_url }}" class="inline-flex items-center text-accent hover:text-primary transition-colors">
+                    Lire la suite
+                    <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+                    </svg>
+                </a>
+            </article>
+        {% endfor %}
+    </div>
+</div> 
