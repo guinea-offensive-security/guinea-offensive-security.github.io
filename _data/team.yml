@@ -1,0 +1,35 @@
+- name: "John Doe"
+  role: "Fondateur & Lead Security Researcher"
+  image: "/assets/images/team/john.jpg"
+  bio: "Expert en sécurité offensive avec plus de 10 ans d'expérience. Spécialisé dans les tests d'intrusion et la recherche de vulnérabilités."
+  social:
+    twitter: "@johndoe"
+    github: "johndoe"
+    linkedin: "john-doe"
+
+- name: "Jane Smith"
+  role: "CTF Team Lead"
+  image: "/assets/images/team/jane.jpg"
+  bio: "Championne de plusieurs compétitions CTF internationales. Expertise en reverse engineering et exploitation."
+  social:
+    twitter: "@janesmith"
+    github: "janesmith"
+    linkedin: "jane-smith"
+
+- name: "Bob Wilson"
+  role: "Security Trainer"
+  image: "/assets/images/team/bob.jpg"
+  bio: "Formateur certifié avec une passion pour l'enseignement. Spécialisé dans les formations pratiques en sécurité offensive."
+  social:
+    twitter: "@bobwilson"
+    github: "bobwilson"
+    linkedin: "bob-wilson"
+
+- name: "Alice Brown"
+  role: "Web Security Expert"
+  image: "/assets/images/team/alice.jpg"
+  bio: "Spécialiste en sécurité des applications web. Auteur de plusieurs outils open source pour les tests de sécurité."
+  social:
+    twitter: "@alicebrown"
+    github: "alicebrown"
+    linkedin: "alice-brown" 

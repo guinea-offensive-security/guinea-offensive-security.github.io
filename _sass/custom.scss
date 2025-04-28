@@ -4,29 +4,6 @@ $secondary: #3b82f6; // blue-500
 $accent: #f3f4f6; // gray-100
 $text: #1f2937; // gray-900
 $text-light: #6b7280; // gray-500
-$dark-bg: #0A0E17;
-$darker-bg: #141B2D;
-
-// Effet de bordure néon
-.neon-border {
-    position: relative;
-    &::before {
-        content: '';
-        position: absolute;
-        top: -2px;
-        left: -2px;
-        right: -2px;
-        bottom: -2px;
-        background: linear-gradient(45deg, $secondary, $accent);
-        z-index: -1;
-        border-radius: 8px;
-        opacity: 0;
-        transition: opacity 0.3s ease-in-out;
-    }
-    &:hover::before {
-        opacity: 1;
-    }
-}
 
 // Styles personnalisés
 .prose {

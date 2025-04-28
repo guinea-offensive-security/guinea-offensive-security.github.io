@@ -1,0 +1,15 @@
+- name: Twitter
+  url: https://twitter.com/guinea_offsec
+  icon: fab fa-twitter
+
+- name: GitHub
+  url: https://github.com/guinea-offsec
+  icon: fab fa-github
+
+- name: LinkedIn
+  url: https://linkedin.com/company/guinea-offsec
+  icon: fab fa-linkedin
+
+- name: Discord
+  url: https://discord.gg/guinea-offsec
+  icon: fab fa-discord 

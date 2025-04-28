@@ -1,15 +1,29 @@
-- name: Twitter
-  url: https://twitter.com/guinea_offsec
-  icon: fab fa-twitter
+- name: "TryHackMe"
+  url: "https://tryhackme.com/team/guineaoffensivesecurity"
+  icon: "fas fa-terminal"
+  description: "Suivez notre progression sur les challenges"
 
-- name: GitHub
-  url: https://github.com/guinea-offsec
-  icon: fab fa-github
+- name: "HackTheBox"
+  url: "https://www.hackthebox.com/teams/guineaoffensivesecurity"
+  icon: "fas fa-cube"
+  description: "Découvrez nos machines hackées"
 
-- name: LinkedIn
-  url: https://linkedin.com/company/guinea-offsec
-  icon: fab fa-linkedin
+- name: "CTFTime"
+  url: "https://ctftime.org/team/12345"
+  icon: "fas fa-flag"
+  description: "Notre classement dans les compétitions CTF"
 
-- name: Discord
-  url: https://discord.gg/guinea-offsec
-  icon: fab fa-discord 
+- name: "LinkedIn"
+  url: "https://linkedin.com/company/guinea-offensive-security"
+  icon: "fab fa-linkedin"
+  description: "Suivez notre actualité professionnelle"
+
+- name: "GitHub"
+  url: "https://github.com/guinea-offsec"
+  icon: "fab fa-github"
+  description: "Découvrez nos projets open source"
+
+- name: "Discord"
+  url: "https://discord.gg/guinea-offsec"
+  icon: "fab fa-discord"
+  description: "Rejoignez notre communauté" 
