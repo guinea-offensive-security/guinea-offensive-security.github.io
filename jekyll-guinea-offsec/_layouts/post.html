@@ -1,0 +1,50 @@
+---
+layout: default
+---
+
+<article class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+    <!-- En-tête de l'article -->
+    <header class="mb-8">
+        <h1 class="text-4xl font-bold text-gray-900 mb-4">{{ page.title }}</h1>
+        
+        <div class="flex items-center text-sm text-gray-500 mb-4">
+            <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%d/%m/%Y" }}</time>
+            {% if page.tags %}
+                <span class="mx-2">•</span>
+                <div class="flex flex-wrap gap-2">
+                    {% for tag in page.tags %}
+                        <span class="bg-blue-100 text-blue-800 text-xs font-medium px-2.5 py-0.5 rounded">
+                            {{ tag }}
+                        </span>
+                    {% endfor %}
+                </div>
+            {% endif %}
+        </div>
+        
+        {% if page.image %}
+            <img class="w-full h-64 object-cover rounded-lg mb-6" src="{{ page.image | relative_url }}" alt="{{ page.title }}">
+        {% endif %}
+    </header>
+    
+    <!-- Contenu de l'article -->
+    <div class="prose prose-blue max-w-none">
+        {{ content }}
+    </div>
+    
+    <!-- Navigation -->
+    <div class="mt-12 pt-8 border-t border-gray-200">
+        <div class="flex justify-between">
+            {% if page.previous %}
+                <a href="{{ page.previous.url | relative_url }}" class="text-blue-600 hover:text-blue-800">
+                    ← {{ page.previous.title }}
+                </a>
+            {% endif %}
+            
+            {% if page.next %}
+                <a href="{{ page.next.url | relative_url }}" class="text-blue-600 hover:text-blue-800">
+                    {{ page.next.title }} →
+                </a>
+            {% endif %}
+        </div>
+    </div>
+</article> 

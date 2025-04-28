@@ -1,0 +1,87 @@
+---
+layout: default
+title: Accueil
+nav_order: 1
+---
+
+<!-- Hero Section -->
+<section class="bg-blue-900 text-white py-20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center">
+            <h1 class="text-4xl font-bold sm:text-5xl md:text-6xl">
+                Guinea Offensive Security
+            </h1>
+            <p class="mt-3 max-w-md mx-auto text-base text-blue-100 sm:text-lg md:mt-5 md:text-xl md:max-w-3xl">
+                Votre partenaire en sécurité offensive
+            </p>
+            <div class="mt-5 max-w-md mx-auto sm:flex sm:justify-center md:mt-8">
+                <div class="rounded-md shadow">
+                    <a href="/join" class="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-blue-900 bg-white hover:bg-blue-50 md:py-4 md:text-lg md:px-10">
+                        Nous rejoindre
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Accomplishments Section -->
+<section class="py-12 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="text-3xl font-bold text-center text-gray-900 mb-8">Nos réalisations</h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {% for accomplishment in site.data.accomplishments %}
+                <div class="bg-blue-50 p-6 rounded-lg shadow">
+                    <h3 class="text-xl font-semibold text-blue-900">{{ accomplishment.title }}</h3>
+                    <p class="mt-2 text-gray-600">{{ accomplishment.description }}</p>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+
+<!-- About Section -->
+<section class="py-12 bg-gray-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="lg:text-center">
+            <h2 class="text-3xl font-bold text-gray-900 mb-8">À propos de nous</h2>
+            <p class="mt-4 max-w-2xl text-xl text-gray-500 lg:mx-auto">
+                {{ site.data.about.description }}
+            </p>
+        </div>
+    </div>
+</section>
+
+<!-- Team Section -->
+<section class="py-12 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="text-3xl font-bold text-center text-gray-900 mb-8">Notre équipe</h2>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+            {% for member in site.data.team %}
+                <div class="bg-white rounded-lg shadow overflow-hidden">
+                    <img class="w-full h-48 object-cover" src="{{ member.image | relative_url }}" alt="{{ member.name }}">
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold text-gray-900">{{ member.name }}</h3>
+                        <p class="text-blue-600">{{ member.role }}</p>
+                        <p class="mt-2 text-gray-600">{{ member.bio }}</p>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+
+<!-- Social Networks Section -->
+<section class="py-12 bg-gray-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="text-3xl font-bold text-center text-gray-900 mb-8">Suivez-nous</h2>
+        <div class="flex justify-center space-x-6">
+            {% for social in site.data.social %}
+                <a href="{{ social.url }}" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-gray-500">
+                    <span class="sr-only">{{ social.name }}</span>
+                    <i class="{{ social.icon }} text-3xl"></i>
+                </a>
+            {% endfor %}
+        </div>
+    </div>
+</section> 

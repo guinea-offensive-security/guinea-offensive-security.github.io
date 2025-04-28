@@ -1,0 +1,44 @@
+title: Guinea Offensive Security
+description: "Guinea Offensive Security - Équipe de sécurité offensive"
+baseurl: "" # Pour GitHub Pages
+url: "" # Pour GitHub Pages
+
+# Collections
+collections:
+  team:
+    output: true
+  sponsors:
+    output: true
+
+# Plugins
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-paginate
+  - jekyll-sitemap
+
+# Pagination
+paginate: 5
+paginate_path: "/blog/page:num/"
+
+# Front matter defaults
+defaults:
+  - scope:
+      path: ""
+    values:
+      layout: "default"
+
+# Markdown settings
+markdown: kramdown
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
+
+# Build settings
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor
+  - .git
+  - .github 
